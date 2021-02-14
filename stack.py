@@ -1,17 +1,18 @@
 from sys import maxsize
 
+
 def newStack():
-    stack=[]
+    stack = []
     return stack
 
+
 def isEmpty(stack):
-    return len(stack)==0
+    return len(stack) == 0
 
 
-def pushITEM(stack,item):
-    if (len(stack)>10):
+def pushITEM(stack, item):
+    if (len(stack) > 10):
         print("Overflow")
-
 
     else:
         stack.append(item)
@@ -25,21 +26,18 @@ def pop_ele(stack):
     return stack
 
 
+print("\\1.push.\\2.pop.\\-1.Exit")
+stack = newStack()
+i = 0
+while(i != -1):
+    i = int(input())
 
-
-
-print("\\1.push.\\2.pop.\\3.peek")
-stack=newStack()
-i=0
-while(i!=-1):
-    i=int(input())
-
-    if i==1:
-        pushITEM(stack,((input())))
-    elif i==2:
+    if i == 1:
+        pushITEM(stack, ((input())))
+    elif i == 2:
         print(pop_ele(stack))
 
-    elif i==-1:
+    elif i == -1:
         exit()
 
     else:
