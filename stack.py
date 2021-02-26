@@ -1,52 +1,3 @@
-# from sys import maxsize
-
-
-# def newStack():
-#     stack = []
-#     return stack
-
-
-# def isEmpty(stack):
-#     return len(stack) == 0
-
-
-# def pushITEM(stack, item):
-#     if (len(stack) > 10):
-#         print("Overflow")
-
-#     else:
-#         stack.append(item)
-#         print(stack)
-
-
-# def pop_ele(stack):
-#     if(isEmpty(stack)):
-#         return ("Underflow")
-#     (stack.pop())
-#     return stack
-
-
-# print("\\1.push.\\2.pop.\\-1.Exit")
-# stack = newStack()
-# i = 0
-# while(i != -1):
-#     i = int(input())
-
-#     if i == 1:
-#         pushITEM(stack, ((input())))
-#     elif i == 2:
-#         print(pop_ele(stack))
-
-#     elif i == -1:
-#         exit()
-
-#     else:
-#         print("Invalid Choice")
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-
-
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -105,7 +56,7 @@ int main()
     char username[30]
     char password[20]
     int tem = 0
-
+    int jimmy = 0
 
     while(ch == 0)
     {
@@ -144,15 +95,26 @@ int main()
             printf("Wrong Password..Answer security question: \n")
 
             puts(sec_que)
-            printf("Enter new password:  ")
-            gets(ans)
 
-            if (strcmp(ans, sec_ans) == 0)
+            while(jimmy == 0)
             {
 
-                gets(reset)
-                strcpy(pass, reset)
-                ch = 0
+
+                gets(ans)
+
+                if (strcmp(ans, sec_ans) == 0)
+                {
+                    printf("Enter new password:  ")
+
+                    gets(reset)
+                    strcpy(pass, reset)
+
+                    jimmy = 1
+                }
+                else{
+                    printf("Wrong answer: \n")
+                    jimmy = 0
+                }
             }
 
 
